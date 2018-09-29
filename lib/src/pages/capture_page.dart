@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qwido/src/utils/routing.dart';
+import 'package:qwido/utils.dart';
 
 class CapturePage extends StatelessWidget {
   @override
@@ -12,12 +12,8 @@ class CapturePage extends StatelessWidget {
         children: <Widget>[
           Container(
             child: FlatButton(
-              onPressed: () => Navigator.push(
-                    context,
-                    RoutingAssistant.navToArtworkPage(
-                      ArtId("12"),
-                    ),
-                  ),
+              onPressed: () => scan().then((code) => Navigator.push(
+                  context, RoutingAssistant.navToArtworkPage(ArtId(code)))),
               child: Icon(
                 Icons.photo_camera,
                 size: 250.0,
