@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
           body1: TextStyle(color: Colors.black),
           title: TextStyle(color: red),
           headline: TextStyle(color: red),
+          display1: TextStyle(fontFamily: "Proxima", fontSize: 25.0, color: grey)
         ),
         primaryColor: grey,
         canvasColor: Color.fromARGB(255, 234, 228, 217),
