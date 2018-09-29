@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qwido/domain.dart';
 import 'package:qwido/utils.dart';
+import 'package:qwido/widgets.dart';
 import 'package:share/share.dart';
 
 class ArtworkPage extends StatelessWidget {
@@ -38,11 +39,13 @@ class ArtworkPage extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 10.0, bottom: 10.0),
-                child: Text(
-                  "Septembre 2012",
-                  style: Theme.of(context).textTheme.subhead,
-                  textAlign: TextAlign.center,
-                ),
+                child: artwork.date != null
+                    ? Text(
+                        artwork.date,
+                        style: Theme.of(context).textTheme.subhead,
+                        textAlign: TextAlign.center,
+                      )
+                    : null,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20.0),
@@ -51,21 +54,7 @@ class ArtworkPage extends StatelessWidget {
               ),
               Container(
                 child: artwork.artist != null
-                    ? ListTile(
-                        leading: CircleAvatar(
-                          backgroundImage: AssetImage(
-                              "lib/assets/photos/${artwork.artist.photo}"),
-                        ),
-                        title: Text(
-                          artwork.artist.name,
-                          style: Theme.of(context).textTheme.subhead,
-                        ),
-                        trailing: new Icon(Icons.arrow_right),
-                        onTap: () => Navigator.push(
-                            context,
-                            RoutingAssistant.navToArtistPage(
-                                ArtistId(artwork.artist.id))),
-                      )
+                    ? ArtistListTile(artwork.artist)
                     : null,
               ),
               Padding(
