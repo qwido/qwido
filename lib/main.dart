@@ -4,16 +4,17 @@ import 'package:qwido/pages.dart';
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
+  final appTitle = 'Qwido';
+
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Flutter Demo',
+      title: appTitle,
       theme: new ThemeData(
         brightness: Brightness.dark,
         primarySwatch: Colors.blue,
-
       ),
-      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+      home: new MyHomePage(title: appTitle),
     );
   }
 }
