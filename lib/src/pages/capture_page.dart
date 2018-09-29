@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qwido/utils.dart';
+import 'package:qwido/widgets.dart';
 
 class CapturePage extends StatefulWidget {
   @override
@@ -98,28 +99,7 @@ class _CapturePageState extends State<CapturePage>
               padding: const EdgeInsets.all(28.0),
               child: Center(child: Text('Appuyez pour scanner')),
             ),
-            ScaleTransition(
-              scale: animation,
-              child: MaterialButton(
-                elevation: 50.0,
-                onPressed: () => scanQR().then((code) {
-                      if (code != null) {
-                        Navigator.push(context,
-                            RoutingAssistant.navToArtworkPage(ArtId(code)));
-                      }
-                    }),
-                child: PhysicalModel(
-                  elevation: 15.0,
-                  color: Colors.transparent,
-                  shape: BoxShape.circle,
-                  child: Image.asset(
-                    'lib/assets/logo_circle.png',
-                    height: 200.0,
-                    width: 200.0,
-                  ),
-                ),
-              ),
-            ),
+            ScanCodeButton(animation),
             Padding(
               padding: EdgeInsets.only(
                 top: 100.0,
