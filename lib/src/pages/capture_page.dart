@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qwido/utils.dart';
+import 'package:qwido/widgets.dart';
 
 class CapturePage extends StatefulWidget {
   @override
@@ -17,37 +18,12 @@ class _CapturePageState extends State<CapturePage> {
   }
 
   void _showBottomSheet() {
-    final controller = TextEditingController();
     setState(() {
       _showBottomSheetCallback = null;
     });
     _scaffoldKey.currentState
         .showBottomSheet<Null>((BuildContext context) {
-          final ThemeData themeData = Theme.of(context);
-          return Container(
-            decoration: BoxDecoration(
-                border:
-                    Border(top: BorderSide(color: themeData.disabledColor))),
-            child: Padding(
-              padding: const EdgeInsets.all(32.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  labelText: 'Code Qwido',
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black),
-                  ),
-                ),
-                keyboardType: TextInputType.numberWithOptions(),
-                controller: controller,
-                onEditingComplete: () => Navigator.push(
-                      context,
-                      RoutingAssistant.navToArtworkPage(
-                        ArtId(controller.text),
-                      ),
-                    ),
-              ),
-            ),
-          );
+          return QwidoCodeInput();
         })
         .closed
         .whenComplete(() {
