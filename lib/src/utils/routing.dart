@@ -15,7 +15,8 @@ class ArtistId {
 
 class RoutingAssistant {
   static MaterialPageRoute navToArtworkPage(ArtId id) =>
-      MaterialPageRoute(builder: (_) => ArtworkPage());
+      MaterialPageRoute(builder: (_) => ArtworkPage(id));
+
   static MaterialPageRoute navToArtistPage(ArtistId id) =>
-      MaterialPageRoute(builder: (_) => ArtistPage());
+      MaterialPageRoute(builder: (_) => ArtistPage(id));
 }

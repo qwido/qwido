@@ -1,7 +1,7 @@
 class Artwork {
-  int id;
+  String id;
   String name;
-  int artistId;
+  String artistId;
   String image;
   String description;
 
