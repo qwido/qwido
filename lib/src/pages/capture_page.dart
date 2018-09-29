@@ -33,7 +33,7 @@ class CapturePage extends StatelessWidget {
               ),
             ),
             Padding(
-              child: Divider(),
+              child: null,
               padding: EdgeInsets.only(
                 top: 100.0,
                 bottom: 20.0,

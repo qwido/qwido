@@ -22,13 +22,17 @@ class ArtworkPage extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Container(
+              Padding(
+                padding: const EdgeInsets.only(top: 20.0, left: 10.0),
                 child: Text(
                   "Corot: Women",
                   textAlign: TextAlign.left,
-                  style: TextStyle(fontSize: 20.0),
+                  style: Theme.of(context).textTheme.headline,
                 ),
-                padding: EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10.0, bottom: 10.0),
+                child: Text("Septembre 2012", style: Theme.of(context).textTheme.subhead,),
               ),
               Container(
                 child: Image.asset("lib/assets/artwork-placeholder.png",
