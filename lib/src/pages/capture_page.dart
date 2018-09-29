@@ -6,9 +6,6 @@ class CapturePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = TextEditingController();
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Qwido"),
-      ),
       body: Padding(
         padding: const EdgeInsets.only(
           top: 100.0,
