@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:qwido/domain.dart';
 
 class MapPage extends StatefulWidget {
   @override
@@ -45,8 +46,13 @@ class MapPageState extends State<MapPage> {
   }
 
   void _onMapCreated(GoogleMapController controller) {
-    controller.addMarker(MarkerOptions(
-        infoWindowText: InfoWindowText('bobby', 'Description'),
-        position: LatLng(48.427782, -71.062819)));
+    MapMarkerRepository mapMarkerRepository = MapMarkerRepository();
+
+    for (Map<String, dynamic> mapMarker in mapMarkerRepository.storage) {
+      controller.addMarker(MarkerOptions(
+        infoWindowText: InfoWindowText(mapMarker['name'], ''),
+        position: LatLng(mapMarker['lat'], mapMarker['long']),
+      ));
+    }
   }
 }
