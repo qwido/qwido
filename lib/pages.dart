@@ -1,0 +1,1 @@
+export 'src/pages/capture_page.dart';
