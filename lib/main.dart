@@ -16,6 +16,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.grey,
         textTheme: TextTheme(
+          body1: TextStyle(color: Colors.black),
+          title: TextStyle(color: red),
+          headline: TextStyle(color: red),
+          display1: TextStyle(fontFamily: "Proxima", fontSize: 25.0, color: grey)
             body1: TextStyle(color: Colors.black),
             title: TextStyle(color: red),
             headline: TextStyle(color: red),

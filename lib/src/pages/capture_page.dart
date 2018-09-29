@@ -61,7 +61,7 @@ class _CapturePageState extends State<CapturePage>
     var theme = Theme.of(context);
     return Scaffold(
       key: _scaffoldKey,
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.only(
           top: 100.0,
           bottom: 0.0,
@@ -72,7 +72,11 @@ class _CapturePageState extends State<CapturePage>
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(28.0),
-              child: Center(child: Text('Appuyez pour scanner')),
+              child: Center(
+                  child: Text(
+                'Appuyez pour scanner',
+                style: Theme.of(context).textTheme.display1,
+              )),
             ),
             ScanCodeButton(animation),
             Padding(
