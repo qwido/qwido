@@ -7,7 +7,8 @@
     -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CAMERA" />
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
          calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -18,6 +19,8 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="qwido"
         android:icon="@mipmap/ic_launcher">
+        <meta-data android:name="com.google.android.geo.API_KEY"
+                   android:value="AIzaSyB1mgdiXwtrKmsgU7QQmfdilvwOmcm-r9Y"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

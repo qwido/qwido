@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:qwido/pages.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  return runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   final appTitle = 'Qwido';
@@ -36,13 +38,6 @@ class _PageSelector extends StatelessWidget {
   const _PageSelector({this.pages});
 
   final List<Widget> pages;
-
-  void _handleArrowButtonPress(BuildContext context, int delta) {
-    final TabController controller = DefaultTabController.of(context);
-    if (!controller.indexIsChanging)
-      controller
-          .animateTo((controller.index + delta).clamp(0, pages.length - 1));
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +75,6 @@ class _PageSelector extends StatelessWidget {
 }
 
 class PageSelectorDemo extends StatelessWidget {
-  static const String routeName = '/material/page-selector';
   final List<Widget> pages = [CapturePage(), MapPage()];
 
   @override

@@ -38,6 +38,12 @@ class _CapturePageState extends State<CapturePage>
     animationController.forward();
   }
 
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
+
   void _showBottomSheet() {
     setState(() {
       _showBottomSheetCallback = null;
