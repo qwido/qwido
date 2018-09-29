@@ -52,13 +52,14 @@ flutter:
   - lib/assets/logo_circle.png
   - lib/assets/qwido_label.png
   - lib/assets/logo_square.png
+  - lib/assets/photos/armandvaillancourt.png
   - lib/assets/photos/belugas.jpg
+  - lib/assets/photos/cenotaphe.png
   - lib/assets/photos/fee.jpg
   - lib/assets/photos/raoulhunter.png
   - lib/assets/photos/sergeboily.png
   - lib/data/artists.json
   - lib/data/oeuvres.json
-  #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

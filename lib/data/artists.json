@@ -25,5 +25,19 @@
          {"name": "twitter", "user": "@hunter2"},
          {"name": "facebook", "user": "facebook.com/rhunter2000"}
      ]
+    },
+    {"id": "d3457b8b-d6da-4e58-9ddc-08fbd91134cd",
+     "name": "Armand Vaillancourt",
+     "photo": "armandvaillancourt.png",
+     "bio": "Armand Vaillancourt est un artiste peintre et sculpteur québécois né en 1929. Artiste engagé, Vaillancourt milite pour la justice, la paix et la liberté. Son Cénotaphe est un véritable manifeste artistique et pacifique. Ses œuvres, disséminés à travers le monde, amènent à la réflexion, encouragent la négociation et la résolution des problèmes.",
+     "oeuvres": ["74383"],
+     "links": [
+         {"name": "portfolio", "uri": "https://example.org/"},
+         {"name": "patreon", "uri": "https://patreon.com/someprofile"}
+     ],
+     "social": [
+         {"name": "twitter", "user": "@hunter2"},
+         {"name": "facebook", "user": "facebook.com/rhunter2000"}
+     ]
     }
 ]
