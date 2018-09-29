@@ -22,7 +22,7 @@ class CapturePage extends StatelessWidget {
             decoration: InputDecoration(
               labelText: 'Code Qwido',
               border: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.white),
+                borderSide: BorderSide(color: Colors.black),
               ),
             ),
             keyboardType: TextInputType.numberWithOptions(),
