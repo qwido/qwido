@@ -61,7 +61,7 @@ class _CapturePageState extends State<CapturePage>
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.only(
           top: 100.0,
           bottom: 0.0,
