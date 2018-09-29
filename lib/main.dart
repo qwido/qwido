@@ -12,7 +12,11 @@ class MyApp extends StatelessWidget {
       title: appTitle,
       theme: ThemeData(
         primarySwatch: Colors.grey,
-        textTheme: TextTheme(body1: TextStyle(color: Colors.black)),
+        textTheme: TextTheme(
+          body1: TextStyle(color: Colors.black),
+          title: TextStyle(color: Color.fromARGB(255, 255, 0, 27)),
+          headline: TextStyle(color: Color.fromARGB(255, 255, 0, 27)),
+        ),
         primaryColor: Color.fromARGB(255, 131, 131, 131),
         canvasColor: Color.fromARGB(255, 234, 228, 217),
         //buttonColor: Colors.purple,
@@ -20,7 +24,7 @@ class MyApp extends StatelessWidget {
         //backgroundColor: Colors.red,
         //accentColor: Colors.yellow,
       ),
-      home:  CapturePage(),
+      home: CapturePage(),
     );
   }
 }
