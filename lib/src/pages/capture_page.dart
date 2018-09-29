@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:qwido/utils.dart';
 import 'package:qwido/widgets.dart';
 
 class CapturePage extends StatefulWidget {
