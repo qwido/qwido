@@ -76,6 +76,10 @@ class _CapturePageState extends State<CapturePage> {
         ),
         child: ListView(
           children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(28.0),
+              child: Center(child: Text('Appuyez pour scanner')),
+            ),
             Container(
               child: FlatButton(
                 onPressed: () => scanQR().then((code) {
@@ -84,22 +88,30 @@ class _CapturePageState extends State<CapturePage> {
                             RoutingAssistant.navToArtworkPage(ArtId(code)));
                       }
                     }),
-                child: Icon(
-                  Icons.photo_camera,
-                  size: 250.0,
+                child: Image.asset(
+                  'lib/assets/logo_circle.png',
+                  height: 200.0,
+                  width: 200.0,
                 ),
               ),
             ),
             Padding(
-              child: null,
               padding: EdgeInsets.only(
                 top: 100.0,
                 bottom: 20.0,
               ),
             ),
-            RaisedButton(
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 72.0),
+              child: MaterialButton(
                 onPressed: _showBottomSheetCallback,
-                child: const Text('SHOW BOTTOM SHEET')),
+                child: Text(
+                  'Saisir code Qwido',
+                  style: TextStyle(color: Colors.white),
+                ),
+                color: Theme.of(context).textTheme.title.color,
+              ),
+            ),
           ],
         ),
       ),

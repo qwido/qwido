@@ -6,7 +6,8 @@ import 'dart:async';
 
 Future<String> scanQR() async {
   try {
-    String barcode = await BarcodeScanner.scan();
+//    String barcode = await BarcodeScanner.scan();
+    final barcode = 'jh';
     return barcode;
   } on PlatformException catch (e) {
     if (e.code == BarcodeScanner.CameraAccessDenied) {

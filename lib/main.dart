@@ -8,16 +8,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final red = Color.fromARGB(255, 229, 16, 62);
+    final grey = Color.fromARGB(255, 99, 100, 98);
     return MaterialApp(
       title: appTitle,
       theme: ThemeData(
         primarySwatch: Colors.grey,
         textTheme: TextTheme(
           body1: TextStyle(color: Colors.black),
-          title: TextStyle(color: Color.fromARGB(255, 255, 0, 27)),
-          headline: TextStyle(color: Color.fromARGB(255, 255, 0, 27)),
+          title: TextStyle(color: red),
+          headline: TextStyle(color: red),
         ),
-        primaryColor: Color.fromARGB(255, 131, 131, 131),
+        primaryColor: grey,
         canvasColor: Color.fromARGB(255, 234, 228, 217),
         //buttonColor: Colors.purple,
         //highlightColor: Colors.orange,

@@ -44,6 +44,7 @@ flutter:
   assets:
   - lib/assets/artwork-placeholder.png
   - lib/assets/avatar-placeholder.png
+  - lib/assets/logo_circle.png
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
