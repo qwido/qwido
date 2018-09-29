@@ -54,8 +54,9 @@ flutter:
   - lib/assets/logo_square.png
   - lib/assets/photos/armandvaillancourt.png
   - lib/assets/photos/belugas.jpg
-  - lib/assets/photos/cenotaphe.png
+  - lib/assets/photos/cenotaphe.jpg
   - lib/assets/photos/fee.jpg
+  - lib/assets/photos/horloge.jpg
   - lib/assets/photos/raoulhunter.png
   - lib/assets/photos/sergeboily.png
   - lib/data/artists.json
