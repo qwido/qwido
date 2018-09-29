@@ -13,7 +13,7 @@ class ScanCodeButton extends StatelessWidget {
       child: RaisedButton(
         shape: CircleBorder(),
         color: Colors.transparent,
-        elevation: 50.0,
+        elevation: 20.0,
         onPressed: () => scanQR().then((code) {
               if (code != null) {
                 Navigator.push(

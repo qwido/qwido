@@ -16,6 +16,7 @@ dependencies:
   font_awesome_flutter: ^8.0.1
   barcode_scan: ^0.0.7
   share: ^0.5.3
+  carousel_pro: ^0.0.13
 
   flutter:
     sdk: flutter
@@ -47,6 +48,12 @@ flutter:
   - lib/assets/logo_circle.png
   - lib/assets/qwido_label.png
   - lib/assets/logo_square.png
+  - lib/assets/photos/belugas.jpg
+  - lib/assets/photos/fee.jpg
+  - lib/assets/photos/raoulhunter.png
+  - lib/assets/photos/sergeboily.png
+  - lib/data/authors.json
+  - lib/data/oeuvres.json
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

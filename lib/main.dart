@@ -10,25 +10,86 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final red = Color.fromARGB(255, 229, 16, 62);
     final grey = Color.fromARGB(255, 99, 100, 98);
+    var theme = Theme.of(context);
     return MaterialApp(
       title: appTitle,
       theme: ThemeData(
         primarySwatch: Colors.grey,
         textTheme: TextTheme(
-          body1: TextStyle(color: Colors.black),
-          title: TextStyle(color: red),
-          headline: TextStyle(color: red),
-          display1: TextStyle(fontFamily: "Proxima", fontSize: 25.0, color: grey)
-        ),
+            title: TextStyle(color: red),
+            headline: TextStyle(color: red),
+            display1:
+                TextStyle(fontFamily: "Proxima", fontSize: 25.0, color: grey),
+            body1: TextStyle(color: Colors.black),
+            button:
+                TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
         primaryColor: grey,
         canvasColor: Color.fromARGB(255, 234, 228, 217),
-        primaryIconTheme: Theme.of(context).iconTheme.copyWith(color: grey),
-        //buttonColor: Colors.purple,
-        //highlightColor: Colors.orange,
-        //backgroundColor: Colors.red,
-        //accentColor: Colors.yellow,
+        primaryIconTheme: theme.iconTheme.copyWith(color: grey),
       ),
-      home: CapturePage(),
+      home: PageSelectorDemo(),
+    );
+  }
+}
+
+class _PageSelector extends StatelessWidget {
+  const _PageSelector({this.pages});
+
+  final List<Widget> pages;
+
+  void _handleArrowButtonPress(BuildContext context, int delta) {
+    final TabController controller = DefaultTabController.of(context);
+    if (!controller.indexIsChanging)
+      controller
+          .animateTo((controller.index + delta).clamp(0, pages.length - 1));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final TabController controller = DefaultTabController.of(context);
+    final Color color = Theme.of(context).accentColor;
+    return SafeArea(
+      top: true,
+      bottom: false,
+      child: Column(
+        children: <Widget>[
+          Container(
+              margin: const EdgeInsets.only(top: 16.0),
+              child: Row(children: <Widget>[
+                TabPageSelector(controller: controller),
+              ], mainAxisAlignment: MainAxisAlignment.center)),
+          Expanded(
+            child: IconTheme(
+              data: IconThemeData(
+                size: 128.0,
+                color: color,
+              ),
+              child: TabBarView(
+                  children: pages.map((Widget icon) {
+                return Container(
+                  padding: const EdgeInsets.all(12.0),
+                  child: icon,
+                );
+              }).toList()),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class PageSelectorDemo extends StatelessWidget {
+  static const String routeName = '/material/page-selector';
+  final List<Widget> pages = [CapturePage(), MapPage()];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: DefaultTabController(
+        length: pages.length,
+        child: _PageSelector(pages: pages),
+      ),
     );
   }
 }

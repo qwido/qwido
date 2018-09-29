@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:qwido/widgets.dart';
 
 class ArtistPage extends StatelessWidget {
   @override
@@ -45,6 +46,10 @@ class ArtistPage extends StatelessWidget {
                   ],
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 20.0),
+                child: ArtworkCarousel(),
               )
             ],
           )
