@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:qwido/src/utils/routing.dart';
 
 class CapturePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final controller = TextEditingController();
     return Padding(
       padding: const EdgeInsets.all(24.0),
       child: Column(
@@ -10,7 +12,12 @@ class CapturePage extends StatelessWidget {
         children: <Widget>[
           Container(
             child: FlatButton(
-              onPressed: null,
+              onPressed: () => Navigator.push(
+                    context,
+                    RoutingAssistant.navToArtworkPage(
+                      ArtId("12"),
+                    ),
+                  ),
               child: Icon(
                 Icons.photo_camera,
                 size: 250.0,
@@ -26,6 +33,13 @@ class CapturePage extends StatelessWidget {
               ),
             ),
             keyboardType: TextInputType.numberWithOptions(),
+            controller: controller,
+            onEditingComplete: () => Navigator.push(
+                  context,
+                  RoutingAssistant.navToArtworkPage(
+                    ArtId(controller.text),
+                  ),
+                ),
           ),
         ],
       ),
