@@ -1,6 +1,3 @@
-import 'dart:async';
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:qwido/domain.dart';
 
@@ -55,7 +52,7 @@ class ArtistRepository {
     }
   ];
 
-  Artist findById(BuildContext context, String id) {
+  Artist findById(String id) {
     var map = storage
         .singleWhere((Map<String, dynamic> artist) => artist['id'] == id);
     final artist = Artist(
