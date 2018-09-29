@@ -1,7 +1,7 @@
 import 'package:barcode_scan/barcode_scan.dart';
 import 'package:flutter/services.dart';
 
-Future<String> scan() async {
+Future<String> scanQR() async {
   try {
     String barcode = await BarcodeScanner.scan();
     return barcode;
@@ -12,7 +12,7 @@ Future<String> scan() async {
       throw 'Unknown error: $e';
     }
   } on FormatException {
-    throw 'null (User returned using the "back"-button before scanning anything. Result)';
+    return null;
   } catch (e) {
     throw 'Unknown error: $e';
   }
