@@ -67,7 +67,7 @@ class _CapturePageState extends State<CapturePage>
           left: 24.0,
           right: 24.0,
         ),
-        child: ListView(
+        child: Column(
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(28.0),
