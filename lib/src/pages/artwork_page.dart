@@ -7,7 +7,8 @@ class ArtworkPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Qwido"),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
         actions: <Widget>[
           IconButton(
               // Use the FontAwesomeIcons class for the IconData
@@ -23,21 +24,25 @@ class ArtworkPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(top: 20.0, left: 10.0),
+                padding: const EdgeInsets.only(top: 0.0),
                 child: Text(
                   "Corot: Women",
-                  textAlign: TextAlign.left,
+                  textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.headline,
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 10.0, bottom: 10.0),
-                child: Text("Septembre 2012", style: Theme.of(context).textTheme.subhead,),
+                child: Text(
+                  "Septembre 2012",
+                  style: Theme.of(context).textTheme.subhead,
+                  textAlign: TextAlign.center,
+                ),
               ),
-              Container(
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20.0),
                 child: Image.asset("lib/assets/artwork-placeholder.png",
                     height: 300.00),
-                padding: EdgeInsets.only(top: 20.0, bottom: 20.0),
               ),
               ListTile(
                 leading: CircleAvatar(
@@ -52,12 +57,12 @@ class ArtworkPage extends StatelessWidget {
                 onTap: () => Navigator.push(context,
                     RoutingAssistant.navToArtistPage(ArtistId("test"))),
               ),
-              Container(
+              Padding(
+                padding: const EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
                 child: Text(
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam malesuada cursus lacinia. Vestibulum auctor imperdiet condimentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla vitae mi eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam in hendrerit magna. Ut odio metus, tincidunt.",
                   textAlign: TextAlign.left,
                 ),
-                padding: EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
               ),
             ],
           )
