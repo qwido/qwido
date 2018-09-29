@@ -5,8 +5,7 @@ import 'package:flutter/services.dart';
 
 Future<String> scanQR() async {
   try {
-//    String barcode = await BarcodeScanner.scan();
-    final barcode = 'jh';
+    String barcode = await BarcodeScanner.scan();
     return barcode;
   } on PlatformException catch (e) {
     if (e.code == BarcodeScanner.CameraAccessDenied) {
