@@ -12,8 +12,12 @@ class CapturePage extends StatelessWidget {
         children: <Widget>[
           Container(
             child: FlatButton(
-              onPressed: () => scan().then((code) => Navigator.push(
-                  context, RoutingAssistant.navToArtworkPage(ArtId(code)))),
+              onPressed: () => scanQR().then((code) {
+                    if (code != null) {
+                      Navigator.push(context,
+                          RoutingAssistant.navToArtworkPage(ArtId(code)));
+                    }
+                  }),
               child: Icon(
                 Icons.photo_camera,
                 size: 250.0,
