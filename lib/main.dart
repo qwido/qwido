@@ -10,22 +10,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final red = Color.fromARGB(255, 229, 16, 62);
     final grey = Color.fromARGB(255, 99, 100, 98);
+    var theme = Theme.of(context);
     return MaterialApp(
       title: appTitle,
       theme: ThemeData(
         primarySwatch: Colors.grey,
         textTheme: TextTheme(
-          body1: TextStyle(color: Colors.black),
-          title: TextStyle(color: red),
-          headline: TextStyle(color: red),
-        ),
+            body1: TextStyle(color: Colors.black),
+            title: TextStyle(color: red),
+            headline: TextStyle(color: red),
+            button:
+                TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
         primaryColor: grey,
         canvasColor: Color.fromARGB(255, 234, 228, 217),
-        primaryIconTheme: Theme.of(context).iconTheme.copyWith(color: grey),
-        //buttonColor: Colors.purple,
-        //highlightColor: Colors.orange,
-        //backgroundColor: Colors.red,
-        //accentColor: Colors.yellow,
+        primaryIconTheme: theme.iconTheme.copyWith(color: grey),
       ),
       home: CapturePage(),
     );

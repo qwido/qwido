@@ -58,6 +58,7 @@ class _CapturePageState extends State<CapturePage>
 
   @override
   Widget build(BuildContext context) {
+    var theme = Theme.of(context);
     return Scaffold(
       key: _scaffoldKey,
       body: Padding(
@@ -82,13 +83,13 @@ class _CapturePageState extends State<CapturePage>
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 72.0),
-              child: MaterialButton(
+              child: RaisedButton(
                 onPressed: _showBottomSheetCallback,
                 child: Text(
-                  'Saisir code Qwido',
-                  style: TextStyle(color: Colors.white),
+                  'SAIRISR CODE QWIDO',
+                  style: theme.textTheme.button,
                 ),
-                color: Theme.of(context).textTheme.title.color,
+                color: theme.textTheme.title.color,
               ),
             ),
           ],
