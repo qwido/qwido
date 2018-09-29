@@ -20,6 +20,7 @@ dependencies:
     git:
       url: git://github.com/flutter/plugins
       path: packages/google_maps_flutter
+  carousel_pro: ^0.0.13
 
   flutter:
     sdk: flutter
@@ -55,7 +56,7 @@ flutter:
   - lib/assets/photos/fee.jpg
   - lib/assets/photos/raoulhunter.png
   - lib/assets/photos/sergeboily.png
-  - lib/data/authors.json
+  - lib/data/artists.json
   - lib/data/oeuvres.json
   #  - images/a_dot_ham.jpeg
 
