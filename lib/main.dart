@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:qwido/src/pages/artwork_page.dart';
+import 'package:qwido/pages.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   final appTitle = 'Qwido';
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       title: appTitle,
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: appTitle),
+      home: MyHomePage(title: appTitle),
     );
   }
 }
@@ -24,18 +24,18 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  _MyHomePageState createState() => new _MyHomePageState();
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
       ),
-      body: new ArtworkPage()
+      body: CapturePage()
     );
   }
 }
