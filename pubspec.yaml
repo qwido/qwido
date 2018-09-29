@@ -59,6 +59,7 @@ flutter:
   - lib/assets/photos/horloge.jpg
   - lib/assets/photos/raoulhunter.png
   - lib/assets/photos/sergeboily.png
+  - lib/assets/photos/silhouette.png
   - lib/data/artists.json
   - lib/data/oeuvres.json
 
