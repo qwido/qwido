@@ -19,4 +19,7 @@ class RoutingAssistant {
 
   static MaterialPageRoute navToArtistPage(ArtistId id) =>
       MaterialPageRoute(builder: (_) => ArtistPage(id));
+
+  static MaterialPageRoute navToMap() =>
+      MaterialPageRoute(builder: (_) => MapPage());
 }

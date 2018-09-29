@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qwido/utils.dart';
 import 'package:qwido/widgets.dart';
 
 class CapturePage extends StatefulWidget {
@@ -67,9 +68,19 @@ class _CapturePageState extends State<CapturePage>
     var theme = Theme.of(context);
     return Scaffold(
       key: _scaffoldKey,
+      appBar: AppBar(
+        elevation: 0.0,
+        backgroundColor: Colors.transparent,
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(Icons.map),
+              onPressed: () =>
+                  Navigator.push(context, RoutingAssistant.navToMap())),
+        ],
+      ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.only(
-          top: 100.0,
+          top: 50.0,
           bottom: 0.0,
           left: 24.0,
           right: 24.0,

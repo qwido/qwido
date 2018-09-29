@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         canvasColor: Color.fromARGB(255, 234, 228, 217),
         primaryIconTheme: theme.iconTheme.copyWith(color: grey),
       ),
-      home: PageSelectorDemo(),
+      home: CapturePage(),
     );
   }
 }
@@ -79,11 +79,6 @@ class PageSelectorDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: DefaultTabController(
-        length: pages.length,
-        child: _PageSelector(pages: pages),
-      ),
-    );
+    return _PageSelector(pages: pages);
   }
 }
