@@ -52,14 +52,18 @@ class ArtistRepository {
   ];
 
   Artist findById(String id) {
-    var map = storage
-        .singleWhere((Map<String, dynamic> artist) => artist['id'] == id);
-    final artist = Artist(
-        id: map['id'],
-        name: map['name'],
-        photo: map['photo'],
-        bio: map['bio'],
-        oeuvres: map['oeuvres']);
-    return artist;
+    try {
+      var map = storage
+          .singleWhere((Map<String, dynamic> artist) => artist['id'] == id);
+      final artist = Artist(
+          id: map['id'],
+          name: map['name'],
+          photo: map['photo'],
+          bio: map['bio'],
+          oeuvres: map['oeuvres']);
+      return artist;
+    } catch (e) {
+      return null;
+    }
   }
 }

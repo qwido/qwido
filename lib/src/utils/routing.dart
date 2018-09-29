@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qwido/domain.dart';
 import 'package:qwido/pages.dart';
 
 class ArtId {
@@ -14,8 +15,8 @@ class ArtistId {
 }
 
 class RoutingAssistant {
-  static MaterialPageRoute navToArtworkPage(ArtId id) =>
-      MaterialPageRoute(builder: (_) => ArtworkPage(id));
+  static MaterialPageRoute navToArtworkPage(Artwork artwork) =>
+      MaterialPageRoute(builder: (_) => ArtworkPage(artwork));
 
   static MaterialPageRoute navToArtistPage(ArtistId id) =>
       MaterialPageRoute(builder: (_) => ArtistPage(id));

@@ -4,17 +4,9 @@ import 'package:qwido/utils.dart';
 import 'package:share/share.dart';
 
 class ArtworkPage extends StatelessWidget {
-  Artwork artwork;
-  Artist artist;
+  final Artwork artwork;
 
-  ArtworkPage(ArtId id) {
-    ArtworkRepository artworkRepository = ArtworkRepository();
-    ArtistRepository artistRepository = ArtistRepository();
-    artwork = artworkRepository.findById(id.id);
-    if (artwork.artistId != null) {
-      artist = artistRepository.findById(artwork.artistId);
-    }
-  }
+  ArtworkPage(this.artwork);
 
   @override
   Widget build(BuildContext context) {
@@ -58,21 +50,21 @@ class ArtworkPage extends StatelessWidget {
                     height: 300.00),
               ),
               Container(
-                child: artist != null
+                child: artwork.artist != null
                     ? ListTile(
                         leading: CircleAvatar(
-                          backgroundImage:
-                              AssetImage("lib/assets/photos/${artist.photo}"),
+                          backgroundImage: AssetImage(
+                              "lib/assets/photos/${artwork.artist.photo}"),
                         ),
                         title: Text(
-                          artist.name,
+                          artwork.artist.name,
                           style: Theme.of(context).textTheme.subhead,
                         ),
                         trailing: new Icon(Icons.arrow_right),
                         onTap: () => Navigator.push(
                             context,
                             RoutingAssistant.navToArtistPage(
-                                ArtistId(artist.id))),
+                                ArtistId(artwork.artist.id))),
                       )
                     : null,
               ),

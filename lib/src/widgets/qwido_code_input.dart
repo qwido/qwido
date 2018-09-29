@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:qwido/domain.dart';
 import 'package:qwido/utils.dart';
 
 class QwidoCodeInput extends StatelessWidget {
+  final ArtworkRepository artworkRepository = new ArtworkRepository();
+
   @override
   Widget build(BuildContext context) {
     final controller = TextEditingController();
@@ -22,32 +25,36 @@ class QwidoCodeInput extends StatelessWidget {
             ),
           ),
           child: TextField(
-            maxLines: 1,
-            style: TextStyle(
-              fontFamily: "Proxima",
-              color: Theme.of(context).textTheme.body2.color,
-              fontWeight: FontWeight.bold,
-              fontSize: 20.0,
-              letterSpacing: 10.0,
-            ),
-            decoration: InputDecoration(
-              hintText: 'QWIDO',
-              focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide.none,
+              maxLines: 1,
+              style: TextStyle(
+                fontFamily: "Proxima",
+                color: Theme.of(context).textTheme.body2.color,
+                fontWeight: FontWeight.bold,
+                fontSize: 20.0,
+                letterSpacing: 10.0,
               ),
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide.none,
-              ),
-            ),
-            keyboardType: TextInputType.numberWithOptions(),
-            controller: controller,
-            onEditingComplete: () => Navigator.push(
-                  context,
-                  RoutingAssistant.navToArtworkPage(
-                    ArtId(controller.text),
-                  ),
+              decoration: InputDecoration(
+                hintText: 'QWIDO',
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide.none,
                 ),
-          ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide.none,
+                ),
+              ),
+              keyboardType: TextInputType.numberWithOptions(),
+              controller: controller,
+              onEditingComplete: () {
+                Artwork artwork = artworkRepository.findById(controller.text);
+                if (artwork != null) {
+                  Navigator.push(
+                    context,
+                    RoutingAssistant.navToArtworkPage(artwork),
+                  );
+                } else {
+                  ErrorToast.showError();
+                }
+              }),
         ),
       ),
     );

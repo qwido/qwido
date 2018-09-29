@@ -21,6 +21,7 @@ dependencies:
       url: git://github.com/flutter/plugins
       path: packages/google_maps_flutter
   carousel_pro: ^0.0.13
+  fluttertoast: ^2.0.8
 
   flutter:
     sdk: flutter

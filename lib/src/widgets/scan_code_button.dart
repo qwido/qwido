@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:qwido/domain.dart';
 import 'package:qwido/utils.dart';
 
 class ScanCodeButton extends StatelessWidget {
   final Animation<double> animation;
+  final ArtworkRepository artworkRepository = new ArtworkRepository();
 
   ScanCodeButton(this.animation);
 
@@ -15,9 +17,12 @@ class ScanCodeButton extends StatelessWidget {
         color: Colors.transparent,
         elevation: 20.0,
         onPressed: () => scanQR().then((code) {
-              if (code != null) {
+          Artwork artwork = artworkRepository.findById(code);
+              if (artwork != null) {
                 Navigator.push(
-                    context, RoutingAssistant.navToArtworkPage(ArtId(code)));
+                    context, RoutingAssistant.navToArtworkPage(artwork));
+              } else {
+                ErrorToast.showError();
               }
             }),
         child: PhysicalModel(
