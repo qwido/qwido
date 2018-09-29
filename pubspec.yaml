@@ -52,7 +52,7 @@ flutter:
   - lib/assets/photos/fee.jpg
   - lib/assets/photos/raoulhunter.png
   - lib/assets/photos/sergeboily.png
-  - lib/data/authors.json
+  - lib/data/artists.json
   - lib/data/oeuvres.json
   #  - images/a_dot_ham.jpeg
 
