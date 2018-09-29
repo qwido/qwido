@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
         ),
         primaryColor: grey,
         canvasColor: Color.fromARGB(255, 234, 228, 217),
+        primaryIconTheme: Theme.of(context).iconTheme.copyWith(color: grey),
         //buttonColor: Colors.purple,
         //highlightColor: Colors.orange,
         //backgroundColor: Colors.red,

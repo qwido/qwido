@@ -22,8 +22,7 @@ class _CapturePageState extends State<CapturePage> {
       _showBottomSheetCallback = null;
     });
     _scaffoldKey.currentState
-        .showBottomSheet<Null>((BuildContext context
-        ) {
+        .showBottomSheet<Null>((BuildContext context) {
           final ThemeData themeData = Theme.of(context);
           return Container(
             decoration: BoxDecoration(
@@ -41,11 +40,11 @@ class _CapturePageState extends State<CapturePage> {
                 keyboardType: TextInputType.numberWithOptions(),
                 controller: controller,
                 onEditingComplete: () => Navigator.push(
-                  context,
-                  RoutingAssistant.navToArtworkPage(
-                    ArtId(controller.text),
-                  ),
-                ),
+                      context,
+                      RoutingAssistant.navToArtworkPage(
+                        ArtId(controller.text),
+                      ),
+                    ),
               ),
             ),
           );
@@ -64,9 +63,6 @@ class _CapturePageState extends State<CapturePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      appBar: AppBar(
-        title: Text("Qwido"),
-      ),
       body: Padding(
         padding: const EdgeInsets.only(
           top: 100.0,
