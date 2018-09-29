@@ -1,12 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:share/share.dart';
 
 class ArtworkPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Qwido"),
+        actions: <Widget>[
+          IconButton(
+              // Use the FontAwesomeIcons class for the IconData
+              icon: Icon(Icons.share),
+              onPressed: () {
+                Share.share("Artwork");
+              }),
+        ],
+      ),
       body: ListView(
         children: <Widget>[
           Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Container(
                 child: Text(
@@ -35,12 +48,6 @@ class ArtworkPage extends StatelessWidget {
                 ),
                 padding: EdgeInsets.only(left: 10.0, right: 10.0),
               ),
-              IconButton(
-                  // Use the FontAwesomeIcons class for the IconData
-                  icon: Icon(Icons.share),
-                  onPressed: () {
-                    print("Pressed");
-                  }),
             ],
           )
         ],
