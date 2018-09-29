@@ -7,14 +7,36 @@ class CapturePage extends StatefulWidget {
   _CapturePageState createState() => _CapturePageState();
 }
 
-class _CapturePageState extends State<CapturePage> {
+class _CapturePageState extends State<CapturePage>
+    with SingleTickerProviderStateMixin {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  AnimationController animationController;
+  Animation<double> animation;
   VoidCallback _showBottomSheetCallback;
 
   @override
   void initState() {
     super.initState();
     _showBottomSheetCallback = _showBottomSheet;
+    animationController = new AnimationController(
+        vsync: this, duration: Duration(milliseconds: 1000));
+
+    animation = Tween<double>(
+      begin: 96.0 / 100,
+      end: 100.0 / 100,
+    ).animate(
+      CurvedAnimation(parent: animationController, curve: Curves.easeInOut),
+    );
+
+    animationController.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        animationController.reverse();
+      } else if (status == AnimationStatus.dismissed) {
+        animationController.forward();
+      }
+    });
+
+    animationController.forward();
   }
 
   void _showBottomSheet() {
@@ -52,21 +74,7 @@ class _CapturePageState extends State<CapturePage> {
               padding: const EdgeInsets.all(28.0),
               child: Center(child: Text('Appuyez pour scanner')),
             ),
-            Container(
-              child: FlatButton(
-                onPressed: () => scanQR().then((code) {
-                      if (code != null) {
-                        Navigator.push(context,
-                            RoutingAssistant.navToArtworkPage(ArtId(code)));
-                      }
-                    }),
-                child: Image.asset(
-                  'lib/assets/logo_circle.png',
-                  height: 200.0,
-                  width: 200.0,
-                ),
-              ),
-            ),
+            ScanCodeButton(animation),
             Padding(
               padding: EdgeInsets.only(
                 top: 100.0,
