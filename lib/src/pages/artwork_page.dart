@@ -7,7 +7,6 @@ class ArtworkPage extends StatelessWidget {
   Artwork artwork;
   Artist artist;
 
-
   ArtworkPage(ArtId id) {
     ArtworkRepository artworkRepository = ArtworkRepository();
     ArtistRepository artistRepository = ArtistRepository();
@@ -59,19 +58,23 @@ class ArtworkPage extends StatelessWidget {
                     height: 300.00),
               ),
               Container(
-                child: artist != null ? ListTile(
-                  leading: CircleAvatar(
-                    backgroundImage:
-                        AssetImage("lib/assets/photos/${artist.photo}"),
-                  ),
-                  title: Text(
-                    artist.name,
-                    style: Theme.of(context).textTheme.subhead,
-                  ),
-                  trailing: new Icon(Icons.arrow_right),
-                  onTap: () => Navigator.push(context,
-                      RoutingAssistant.navToArtistPage(ArtistId(artist.id))),
-                ): null,
+                child: artist != null
+                    ? ListTile(
+                        leading: CircleAvatar(
+                          backgroundImage:
+                              AssetImage("lib/assets/photos/${artist.photo}"),
+                        ),
+                        title: Text(
+                          artist.name,
+                          style: Theme.of(context).textTheme.subhead,
+                        ),
+                        trailing: new Icon(Icons.arrow_right),
+                        onTap: () => Navigator.push(
+                            context,
+                            RoutingAssistant.navToArtistPage(
+                                ArtistId(artist.id))),
+                      )
+                    : null,
               ),
               Padding(
                 padding:
