@@ -53,6 +53,7 @@ flutter:
   - lib/assets/logo_circle.png
   - lib/assets/qwido_label.png
   - lib/assets/logo_square.png
+  - lib/assets/pin-small.png
   - lib/assets/photos/armandvaillancourt.png
   - lib/assets/photos/belugas.jpg
   - lib/assets/photos/cenotaphe.jpg

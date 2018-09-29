@@ -16,11 +16,15 @@ class MapPageState extends State<MapPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: new Text(
+          'Oeuvres à proximité',
+          style: Theme.of(context).textTheme.display1,
+        ),
         backgroundColor: Colors.transparent,
         elevation: 0.0,
       ),
       body: Padding(
-        padding: EdgeInsets.all(15.0),
+        padding: EdgeInsets.only(left: 15.0, right: 15.0, bottom: 15.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -30,9 +34,9 @@ class MapPageState extends State<MapPage> {
                   options: GoogleMapOptions(
                     cameraPosition: CameraPosition(
                       bearing: 0.0,
-                      target: LatLng(48.4268804, -71.0726884),
+                      target: LatLng(48.427782, -71.062819),
                       tilt: 30.0,
-                      zoom: 14.0,
+                      zoom: 13.5,
                     ),
                   ),
                   onMapCreated: _onMapCreated,
@@ -50,8 +54,9 @@ class MapPageState extends State<MapPage> {
 
     for (Map<String, dynamic> mapMarker in mapMarkerRepository.storage) {
       controller.addMarker(MarkerOptions(
-        infoWindowText: InfoWindowText(mapMarker['name'], ''),
+        infoWindowText: InfoWindowText(mapMarker['name'], mapMarker['artist']),
         position: LatLng(mapMarker['lat'], mapMarker['long']),
+        icon: BitmapDescriptor.fromAsset('lib/assets/pin-small.png'),
       ));
     }
   }
