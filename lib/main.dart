@@ -11,7 +11,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: appTitle,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.grey,
+        textTheme: TextTheme(body1: TextStyle(color: Colors.black)),
+        primaryColor: Color.fromARGB(255, 131, 131, 131),
+        canvasColor: Color.fromARGB(255, 234, 228, 217),
+        //buttonColor: Colors.purple,
+        //highlightColor: Colors.orange,
+        //backgroundColor: Colors.red,
+        //accentColor: Colors.yellow,
       ),
       home: MyHomePage(title: appTitle),
     );
@@ -28,14 +35,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: CapturePage()
-    );
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        body: CapturePage());
   }
 }
