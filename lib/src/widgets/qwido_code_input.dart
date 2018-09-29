@@ -26,7 +26,8 @@ class QwidoCodeInput extends StatelessWidget {
             style: TextStyle(
               fontFamily: "Proxima",
               color: Theme.of(context).textTheme.body2.color,
-              fontSize: 24.0,
+              fontWeight: FontWeight.bold,
+              fontSize: 20.0,
               letterSpacing: 10.0,
             ),
             decoration: InputDecoration(
