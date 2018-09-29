@@ -26,6 +26,7 @@ class QwidoCodeInput extends StatelessWidget {
           ),
           child: TextField(
               maxLines: 1,
+              autofocus: true,
               style: TextStyle(
                 fontFamily: "Proxima",
                 color: Theme.of(context).textTheme.body2.color,
