@@ -7,7 +7,15 @@ class ArtId {
   ArtId(this.id);
 }
 
+class ArtistId {
+  final String id;
+
+  ArtistId(this.id);
+}
+
 class RoutingAssistant {
   static MaterialPageRoute navToArtworkPage(ArtId id) =>
       MaterialPageRoute(builder: (_) => ArtworkPage());
+  static MaterialPageRoute navToArtistPage(ArtistId id) =>
+      MaterialPageRoute(builder: (_) => ArtistPage());
 }
