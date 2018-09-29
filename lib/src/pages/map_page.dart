@@ -23,7 +23,7 @@ class MapPageState extends State<MapPage> {
               child: GoogleMap(
                 options: GoogleMapOptions(
                   cameraPosition: CameraPosition(
-                    bearing: 270.0,
+                    bearing: 0.0,
                     target: LatLng(48.4268804, -71.0726884),
                     tilt: 30.0,
                     zoom: 14.0,
@@ -39,6 +39,8 @@ class MapPageState extends State<MapPage> {
   }
 
   void _onMapCreated(GoogleMapController controller) {
-    setState(() {});
+    controller.addMarker(MarkerOptions(
+        infoWindowText: InfoWindowText('bobby', 'Description'),
+        position: LatLng(48.427782, -71.062819)));
   }
 }
