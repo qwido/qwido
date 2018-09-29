@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:qwido/utils.dart';
 import 'package:qwido/widgets.dart';
 
 class CapturePage extends StatefulWidget {
@@ -72,7 +71,11 @@ class _CapturePageState extends State<CapturePage>
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(28.0),
-              child: Center(child: Text('Appuyez pour scanner')),
+              child: Center(
+                  child: Text(
+                'Appuyez pour scanner',
+                style: Theme.of(context).textTheme.display1,
+              )),
             ),
             ScanCodeButton(animation),
             Padding(

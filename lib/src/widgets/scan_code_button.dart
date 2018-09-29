@@ -10,7 +10,9 @@ class ScanCodeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScaleTransition(
       scale: animation,
-      child: MaterialButton(
+      child: RaisedButton(
+        shape: CircleBorder(),
+        color: Colors.transparent,
         elevation: 50.0,
         onPressed: () => scanQR().then((code) {
               if (code != null) {
