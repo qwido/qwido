@@ -63,6 +63,20 @@ class ArtworkRepository {
       "date": "Septembre 2011",
       "description":
           "Prix des libraires 2012 dans la catégorie Roman québécois À l’autre bout du monde il y a Arvida, ville modèle érigée au début du vingtième siècle par l’industriel américain Arthur Vining Davis. Le narrateur de ce livre est né là, dans la capitale de l’aluminium, construite en cent trente-cinq jours. Petite utopie nordique peuplée de braves gens, de menteurs compulsifs et de pures crapules.\nDans les quatre paroisses d’Arvida, le long du Saguenay et par-delà l’horizon bleuté des monts Valin, on se raconte des histoires de nuits en forêt et de matins difficiles. Des histoires de jeunes filles innocentes et de bêtes sauvages, de meurtre raté et de mutilation rituelle, de roadtrip vers nulle part et de maison hantée. Des histoires tantôt tristes, tantôt drôles, tantôt horribles, et souvent un peu tout ça à la fois, mémorables pour leur profonde authenticité, même si, il faut bien le dire, elles sont toutes à moitié fausses et à moitié inventées. Digne fils de son conteur de père, Samuel Archibald se révèle dans ces pages un émule de Cormac McCarthy obsédé par Proust, un héritier d’Anne Hébert qui a trop lu Jim Thompson et Stephen King."
+    },
+    {
+      "id": "38215",
+      "name": "Ogre",
+      "image": "ogre.jpg",
+      "description":
+          "MONOLOGUE POUR UNE MARIONNETTE ÉGOCENTRIQUE\n\nIl est sale, affamé, obèse. Pendant que l’Ogre fait sa toilette, plusieurs personnes surgissent dans sa salle de bain. Les tragédies s’enchaînent à un rythme démesuré : inceste, meurtre, suicide. L’Ogre découvre bientôt que tout n’est que supercherie, prétexte à une émission de télé-réalité dont il devient la vedette instantanée. Mais toutes ces caméras qui l’adulent ne sont peut-être que les propres fantasmes de cet Ogre narcissique. Les nombreux rebondissements grotesques contribuent à l’humour grinçant de ce texte puissant et lucide."
+    },
+    {
+      "id": "17649",
+      "name": "Le Garçon au visage disparu",
+      "image": "le-garcon-au-visage-disparu.jpg",
+      "description":
+          "Jérémy se plaint que son père, travailleur humanitaire, délaisse sa famille au profit d’étrangers vivant à l’autre bout du monde. Il faudrait qu’il soit lui-même à moitié mort, pense-t-il, pour que son père lui exprime enfin son amour. Lorsque Jérémy apprend que celui-ci a été pris en otage, son univers bascule. Sa mère, un matin, le retrouve dans son lit sans visage. Désemparée, elle contacte policier, psychiatre et prêtre afin qu’ils l’aident à comprendre cette étrange disparition."
     }
   ];
 
