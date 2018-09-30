@@ -42,6 +42,18 @@ class ArtistRepository {
         {"name": "portfolio", "url": "https://example.org/"},
         {"name": "patreon", "url": "https://patreon.com/someprofile"}
       ]
+    },
+    {
+      "id": "00269fee-13fa-4df5-a5ed-291e5e879d77",
+      "name": "Frédérick Lavoie",
+      "bio": "Journaliste et écrivain, entre Montréal, Bombay et ailleurs",
+      "oeuvres": ["9782924519066", "9782923530468"],
+      "social": [
+        {"name": "twitter", "url": "https://twitter.com/fredotchka"},
+        {"name": "goodreads", "url": "https://www.goodreads.com/author/show/6574091.Fr_d_rick_Lavoie?from_search=true"},
+        {"name": "editeur", "url": "http://lapeuplade.com/fr/authors/frederick-lavoie/"},
+        {"name": "le devoir", "url": "https://www.ledevoir.com/auteur/frederick-lavoie"}
+      ]
     }
   ];
 

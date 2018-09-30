@@ -33,6 +33,9 @@ class SocialIcon extends StatelessWidget {
       case '500px':
         icon = Icon(FontAwesomeIcons.fiveHundredPx);
         break;
+      case 'goodreads':
+        icon = Icon(FontAwesomeIcons.goodreads);
+        break;
       default:
         icon = Icon(FontAwesomeIcons.link);
         break;
