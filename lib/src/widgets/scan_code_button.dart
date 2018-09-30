@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qwido/domain.dart';
 import 'package:qwido/utils.dart';
+import 'package:vibrate/vibrate.dart';
 
 class ScanCodeButton extends StatelessWidget {
   final Animation<double> animation;
@@ -19,6 +20,7 @@ class ScanCodeButton extends StatelessWidget {
         onPressed: () => scanQR().then((code) {
           Artwork artwork = artworkRepository.findById(code);
               if (artwork != null) {
+                Vibrate.feedback(FeedbackType.success);
                 Navigator.push(
                     context, RoutingAssistant.navToArtworkPage(artwork));
               } else {

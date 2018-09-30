@@ -22,6 +22,7 @@ dependencies:
       path: packages/google_maps_flutter
   fluttertoast: ^2.0.8
   url_launcher: ^4.0.0
+  vibrate: ^0.0.4
 
   flutter:
     sdk: flutter
