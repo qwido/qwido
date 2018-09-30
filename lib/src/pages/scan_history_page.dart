@@ -9,7 +9,7 @@ class ScanHistoryPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Historique des Qwid',
-          style: Theme.of(context).textTheme.headline,
+          style: Theme.of(context).textTheme.display1,
         ),
         backgroundColor: Colors.transparent,
         elevation: 0.0,

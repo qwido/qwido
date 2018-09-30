@@ -28,21 +28,55 @@ class ArtworkTile extends StatelessWidget {
   Widget build(BuildContext context) => GestureDetector(
         onTap: () => navigateToArtist(context),
         child: Container(
-          height: 150.0,
+          height: 250.0,
           child: Stack(
             fit: StackFit.expand,
             children: <Widget>[
-              Image.asset(
-                'lib/assets/photos/${artwork.image}',
-                height: 150.0,
-              ),
-              Container(
+              DecoratedBox(
+                position: DecorationPosition.foreground,
+                child: Image.asset(
+                  'lib/assets/photos/${artwork.image}',
+                  fit: BoxFit.cover,
+                ),
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
-                      colors: <Color>[Colors.transparent, Colors.yellow],
-                      begin: FractionalOffset.center),
+                      colors: <Color>[
+                        Colors.transparent,
+                        Theme.of(context).canvasColor.withOpacity(0.1),
+                        Theme.of(context).canvasColor.withOpacity(0.2),
+                        Theme.of(context).canvasColor.withOpacity(0.3),
+                        Theme.of(context).canvasColor.withOpacity(0.4),
+                        Theme.of(context).canvasColor.withOpacity(0.5),
+                        Theme.of(context).canvasColor.withOpacity(0.6),
+                        Theme.of(context).canvasColor.withOpacity(0.9),
+                        Theme.of(context).canvasColor,
+                        Theme.of(context).canvasColor
+                      ],
+                      begin: FractionalOffset.topCenter,
+                      end: FractionalOffset.bottomCenter),
                 ),
               ),
+              Column(children: <Widget>[
+                Spacer(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 18.0),
+                  child: Column(
+                    children: <Widget>[
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          artwork.name,
+                          style: Theme.of(context).textTheme.headline,
+                        ),
+                      ),
+                      Text(
+                        artwork.artist?.name ?? '',
+                        style: Theme.of(context).textTheme.subhead,
+                      ),
+                    ],
+                  ),
+                ),
+              ]),
             ],
           ),
         ),
