@@ -15,23 +15,28 @@ class ArtworkCarousel extends StatelessWidget {
         .where((artwork) => artwork != null)
         .toList();
     return Column(
-      children: otherArtworks.isNotEmpty ? <Widget>[
-        Text(
-          "Oeuvres",
-          style: Theme.of(context).textTheme.subhead,
-        ),
-        SizedBox(
-          height: 250.0,
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: otherArtworks
-                  .map((artwork) => CarouselImage(artwork))
-                  .toList(),
-            ),
-          ),
-        ),
-      ]: [],
+      children: otherArtworks.isNotEmpty
+          ? <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  "Oeuvres",
+                  style: Theme.of(context).textTheme.subhead,
+                ),
+              ),
+              SizedBox(
+                height: 250.0,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: otherArtworks
+                        .map((artwork) => CarouselImage(artwork))
+                        .toList(),
+                  ),
+                ),
+              ),
+            ]
+          : [],
     );
   }
 }

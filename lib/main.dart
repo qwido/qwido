@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
             headline: TextStyle(color: red),
             display1:
                 TextStyle(fontFamily: "Proxima", fontSize: 25.0, color: grey),
+            subhead: TextStyle(fontFamily: "Proxima", color: grey),
             body1: TextStyle(color: Colors.black),
             button:
                 TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
