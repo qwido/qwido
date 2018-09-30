@@ -57,6 +57,8 @@ class ArtworkRepository {
     },
   ];
 
+  List<Artwork> getAll() => storage.map((m) => Artwork.fromMap(m)).toList();
+
   Artwork findById(String id) {
     try {
       var map = storage

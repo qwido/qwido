@@ -23,4 +23,7 @@ class RoutingAssistant {
 
   static MaterialPageRoute navToMap() =>
       MaterialPageRoute(builder: (_) => MapPage());
+
+  static MaterialPageRoute navToHistory() =>
+      MaterialPageRoute(builder: (_) => ScanHistoryPage());
 }

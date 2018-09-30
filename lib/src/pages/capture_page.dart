@@ -73,9 +73,15 @@ class _CapturePageState extends State<CapturePage>
         backgroundColor: Colors.transparent,
         actions: <Widget>[
           IconButton(
-              icon: Icon(Icons.map),
-              onPressed: () =>
-                  Navigator.push(context, RoutingAssistant.navToMap())),
+            icon: Icon(Icons.history),
+            onPressed: () =>
+                Navigator.push(context, RoutingAssistant.navToHistory()),
+          ),
+          IconButton(
+            icon: Icon(Icons.map),
+            onPressed: () =>
+                Navigator.push(context, RoutingAssistant.navToMap()),
+          ),
         ],
       ),
       body: SingleChildScrollView(

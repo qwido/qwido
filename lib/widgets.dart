@@ -3,3 +3,4 @@ export 'src/widgets/scan_code_button.dart';
 export 'src/widgets/artwork_carousel.dart';
 export 'src/widgets/social_list.dart';
 export 'src/widgets/artist_list_tile.dart';
+export 'src/widgets/artwork_tile.dart';

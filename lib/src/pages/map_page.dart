@@ -24,7 +24,7 @@ class MapPageState extends State<MapPage> {
         elevation: 0.0,
       ),
       body: Padding(
-        padding: EdgeInsets.only(left: 15.0, right: 15.0, bottom: 15.0),
+        padding: EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
