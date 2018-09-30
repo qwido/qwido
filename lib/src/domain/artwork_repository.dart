@@ -30,7 +30,7 @@ class ArtworkRepository {
           "nature de l’œuvre: sculpture \nmatériaux: acier\nEmplacement: Hôtel de Ville de Chicoutimi, 201 rue Racine Est, Chicoutimi\n\nLe Cénotaphe est l’œuvre du sculpteur et peintre Armand Vaillancourt. Mesurant près de 5 mètres de hauteur, ce monument est formé de quatre canons en acier et d’un assemblage de plaques de fer et de débris de métal, le tout fixé sur une table de bronze sur laquelle sont reproduits les nom des dix-sept Chicoutimiens morts sur le champ de bataille des deux conflits mondiaux du XXème siècle. \nLe Cénotaphe peut suggérer l’idée d’un arbre déchiqueté, privé de ses branches. Plusieures interprétations sont possibles: certaines y voient la bouche d’un canon éclaté après le passage d’un obus, d’autres y reconnaissaient un amas de ferrailles visibles sur les théâtres de guerres. \n\nLe Cénotaphe a été installé le 15 novembre 1959, jour du souvenir, à l’emplacement où se réunissent annuellement les anciens combattants. À son installation, l’œuvre n’a pas fait consensus: certains anciens combattants n’étaient pas satisfait du résultat de l’œuvre, qui considéraient comme trop policée au regard des horreurs qu’ils ont vécus pendant la Guerre. Pourtant, l’engouement autour de la restauration du monument en 2014 a rappelé l’attachement des saguenéens à leur Cénotaphe."
     },
     {
-      "id": "11123",
+      "id": "92248",
       "name": "Horloge",
       "image": "horloge.jpg",
       "date": "24 août 1992",
