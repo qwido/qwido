@@ -38,7 +38,7 @@ class ArtworkRepository {
           "Zone Portuaire - Vieux Port - Chicoutimi\n\nAnnée de l’installation: 1992\n\nInaugurée le 24 août 1992 à l’occasion des 150 ans de la fondation de la ville de Chicoutimi, l’horloge, située au cœur de la zone portuaire est entourée de quatre plaques, dont la réalisation à fait appel à l’imaginaire des saguenéens quant à la projection de ce que sera leur ville dans 50 ans. Au cœur de l’horloge ont été placées des capsules temporelles qui seront ouvertes le 24 août 2042, 50 ans jour pour jour après leur dépôt."
     },
     {
-      "id": "9782923530468",
+      "id": "9782894063842",
       "artist_id": "00269fee-13fa-4df5-a5ed-291e5e879d77",
       "name": "Allers simples : aventures journalistiques en Post-Soviétie",
       "image": "allers-simples.jpg",
