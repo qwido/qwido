@@ -61,6 +61,7 @@ class ArtworkPage extends StatelessWidget {
                 child: Text(
                   artwork.description,
                   textAlign: TextAlign.left,
+                  style: Theme.of(context).textTheme.body1,
                 ),
               ),
             ],
