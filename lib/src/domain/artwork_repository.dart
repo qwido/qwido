@@ -55,6 +55,15 @@ class ArtworkRepository {
       "description":
           "Comment un pays en paix s’enfonce-t-il soudainement dans la guerre ? Pourquoi des citoyens sans histoire en viennent-ils à prendre les armes et à s’entretuer ? Dans Ukraine à fragmentation, Frédérick Lavoie raconte à Artyom, un enfant qu’il a vu dans son petit cercueil bleu par un après-midi de janvier 2015, le fil des événements qui ont conduit à sa mort."
     },
+    {
+      "id": "9782896980000",
+      "artist_id": "54f40b24-6e2d-4530-85fd-4cb7abddb7ec",
+      "name": "Arvida",
+      "image": "arvida.png",
+      "date": "Septembre 2011",
+      "description":
+          "Prix des libraires 2012 dans la catégorie Roman québécois À l’autre bout du monde il y a Arvida, ville modèle érigée au début du vingtième siècle par l’industriel américain Arthur Vining Davis. Le narrateur de ce livre est né là, dans la capitale de l’aluminium, construite en cent trente-cinq jours. Petite utopie nordique peuplée de braves gens, de menteurs compulsifs et de pures crapules.\nDans les quatre paroisses d’Arvida, le long du Saguenay et par-delà l’horizon bleuté des monts Valin, on se raconte des histoires de nuits en forêt et de matins difficiles. Des histoires de jeunes filles innocentes et de bêtes sauvages, de meurtre raté et de mutilation rituelle, de roadtrip vers nulle part et de maison hantée. Des histoires tantôt tristes, tantôt drôles, tantôt horribles, et souvent un peu tout ça à la fois, mémorables pour leur profonde authenticité, même si, il faut bien le dire, elles sont toutes à moitié fausses et à moitié inventées. Digne fils de son conteur de père, Samuel Archibald se révèle dans ces pages un émule de Cormac McCarthy obsédé par Proust, un héritier d’Anne Hébert qui a trop lu Jim Thompson et Stephen King."
+    }
   ];
 
   List<Artwork> getAll() => storage.map((m) => Artwork.fromMap(m)).toList();

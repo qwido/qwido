@@ -55,10 +55,12 @@ flutter:
   - lib/assets/qwido_label.png
   - lib/assets/logo_square.png
   - lib/assets/pin-small.png
+  - lib/assets/photos/arvida.png
   - lib/assets/photos/armandvaillancourt.png
   - lib/assets/photos/belugas.jpg
   - lib/assets/photos/cenotaphe.jpg
   - lib/assets/photos/fee.jpg
+  - lib/assets/photos/fredlavoie.jpg
   - lib/assets/photos/horloge.jpg
   - lib/assets/photos/raoulhunter.png
   - lib/assets/photos/sergeboily.png

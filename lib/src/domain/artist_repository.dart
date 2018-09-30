@@ -46,14 +46,22 @@ class ArtistRepository {
     {
       "id": "00269fee-13fa-4df5-a5ed-291e5e879d77",
       "name": "Frédérick Lavoie",
+      "photo": "fredlavoie.jpg",
       "bio": "Journaliste et écrivain, entre Montréal, Bombay et ailleurs",
-      "oeuvres": ["9782924519066", "9782923530468"],
+      "oeuvres": ["9782924519066", "9782894063842"],
       "social": [
         {"name": "twitter", "url": "https://twitter.com/fredotchka"},
         {"name": "goodreads", "url": "https://www.goodreads.com/author/show/6574091.Fr_d_rick_Lavoie?from_search=true"},
         {"name": "editeur", "url": "http://lapeuplade.com/fr/authors/frederick-lavoie/"},
         {"name": "le devoir", "url": "https://www.ledevoir.com/auteur/frederick-lavoie"}
       ]
+    },
+    {
+      "id": "54f40b24-6e2d-4530-85fd-4cb7abddb7ec",
+      "name": "Samuel Archibald",
+      "bio": "Samuel Archibald est né en 1978 à Arvida. Il enseigne à l'Université du Québec à Montréal, où il donne des cours sur le roman policier et de science-fiction, le cinéma d'horreur, les jeux vidéo et la culture populaire contemporaine.",
+      "oeuvres": ["9782896980000"],
+      "social": []
     }
   ];
 
@@ -62,7 +70,7 @@ class ArtistRepository {
       var map = storage
           .singleWhere((Map<String, dynamic> artist) => artist['id'] == id);
 
-      List<Map<String, String>> socials = map['social'];
+      List<dynamic> socials = map['social'];
         
       final artist = Artist(
           id: map['id'],
