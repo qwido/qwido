@@ -13,17 +13,18 @@ class ArtworkCarousel extends StatelessWidget {
           style: Theme.of(context).textTheme.subhead,
         ),
         SizedBox(
-            height: 250.0,
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: <Widget>[
-                  Image.asset('lib/assets/photos/belugas.jpg'),
-                  Image.asset('lib/assets/photos/fee.jpg'),
-                  Image.asset('lib/assets/photos/cenotaphe.jpg'),
-                ],
-              ),
-            )),
+          height: 250.0,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: <Widget>[
+                Image.asset('lib/assets/photos/belugas.jpg'),
+                Image.asset('lib/assets/photos/fee.jpg'),
+                Image.asset('lib/assets/photos/cenotaphe.jpg'),
+              ],
+            ),
+          ),
+        ),
       ],
     );
   }
