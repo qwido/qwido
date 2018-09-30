@@ -63,8 +63,8 @@ flutter:
   - lib/assets/photos/raoulhunter.png
   - lib/assets/photos/sergeboily.png
   - lib/assets/photos/silhouette.png
-  - lib/assets/photos/allers-simples.png
-  - lib/assets/photos/ukraine-a-fragmentation.png
+  - lib/assets/photos/allers-simples.jpg
+  - lib/assets/photos/ukraine-a-fragmentation.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
