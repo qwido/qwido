@@ -8,7 +8,7 @@ class ScanHistoryPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Historique des Qwid',
+          'Vos découvertes',
           style: Theme.of(context).textTheme.display1,
         ),
         backgroundColor: Colors.transparent,
