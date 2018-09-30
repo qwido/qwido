@@ -69,6 +69,7 @@ flutter:
   - lib/assets/photos/ukraine-a-fragmentation.jpg
   - lib/assets/photos/ogre.jpg
   - lib/assets/photos/le-garcon-au-visage-disparu.jpg
+  - lib/assets/photos/journees-culture.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
