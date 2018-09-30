@@ -30,7 +30,7 @@ class ArtworkRepository {
           "nature de l’œuvre: sculpture \nmatériaux: acier\nEmplacement: Hôtel de Ville de Chicoutimi, 201 rue Racine Est, Chicoutimi\n\nLe Cénotaphe est l’œuvre du sculpteur et peintre Armand Vaillancourt. Mesurant près de 5 mètres de hauteur, ce monument est formé de quatre canons en acier et d’un assemblage de plaques de fer et de débris de métal, le tout fixé sur une table de bronze sur laquelle sont reproduits les nom des dix-sept Chicoutimiens morts sur le champ de bataille des deux conflits mondiaux du XXème siècle. \nLe Cénotaphe peut suggérer l’idée d’un arbre déchiqueté, privé de ses branches. Plusieures interprétations sont possibles: certaines y voient la bouche d’un canon éclaté après le passage d’un obus, d’autres y reconnaissaient un amas de ferrailles visibles sur les théâtres de guerres. \n\nLe Cénotaphe a été installé le 15 novembre 1959, jour du souvenir, à l’emplacement où se réunissent annuellement les anciens combattants. À son installation, l’œuvre n’a pas fait consensus: certains anciens combattants n’étaient pas satisfait du résultat de l’œuvre, qui considéraient comme trop policée au regard des horreurs qu’ils ont vécus pendant la Guerre. Pourtant, l’engouement autour de la restauration du monument en 2014 a rappelé l’attachement des saguenéens à leur Cénotaphe."
     },
     {
-      "id": "92248",
+      "id": "87225",
       "name": "Horloge",
       "image": "horloge.jpg",
       "date": "24 août 1992",
@@ -77,6 +77,14 @@ class ArtworkRepository {
       "image": "le-garcon-au-visage-disparu.jpg",
       "description":
           "Jérémy se plaint que son père, travailleur humanitaire, délaisse sa famille au profit d’étrangers vivant à l’autre bout du monde. Il faudrait qu’il soit lui-même à moitié mort, pense-t-il, pour que son père lui exprime enfin son amour. Lorsque Jérémy apprend que celui-ci a été pris en otage, son univers bascule. Sa mère, un matin, le retrouve dans son lit sans visage. Désemparée, elle contacte policier, psychiatre et prêtre afin qu’ils l’aident à comprendre cette étrange disparition."
+    },
+    {
+      "id": "92248",
+      "name": "Les journées de la culture",
+      "image": "journees-culture.png",
+      "date": "28, 29 et 30 septembre",
+      "description":
+      "Initiées et orchestrées par Culture pour tous, les Journées de la culture sont trois jours d’activités gratuites et ouvertes à tous qui favorisent un plus grand accès de la population aux arts et à la culture. Tel que décrété par l’Assemblée nationale, l’événement se déroule chaque année le dernier vendredi de septembre et les deux jours suivants, partout au Québec.\n\nLa programmation propose une incursion interactive dans les processus de création et les savoir-faire. Les milliers d’activités qui la composent sont organisées par des artistes professionnels, artisans et travailleurs culturels, gens d’affaires, enseignants et travailleurs communautaires, municipaux ou gouvernementaux.\n\nPour devenir organisateur, il suffit de concevoir et de prendre en charge la réalisation complète d’une ou plusieurs activités. Cette participation se fait sur une base volontaire.\n\nReconnaissant l’importance et le caractère essentiel du travail des artistes professionnels, nous encourageons les organisateurs qui font appel à leurs services à les rémunérer équitablement."
     }
   ];
 
@@ -91,6 +99,7 @@ class ArtworkRepository {
           name: map['name'],
           artistId: map['artist_id'],
           image: map['image'],
+          date: map['date'],
           description: map['description']);
       return artwork;
     } catch (e) {
