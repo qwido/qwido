@@ -25,11 +25,17 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.grey,
         textTheme: TextTheme(
             title: TextStyle(color: red),
-            headline: TextStyle(color: red),
+            headline: TextStyle(
+                fontFamily: "Lora",
+                color: red,
+                fontSize: 25.0,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+            ),
             display1:
                 TextStyle(fontFamily: "Proxima", fontSize: 25.0, color: grey),
-            subhead: TextStyle(fontFamily: "Proxima", color: grey),
-            body1: TextStyle(fontFamily: "Proxima", color: Colors.black),
+            subhead: TextStyle(fontFamily: "Proxima", color: grey, fontSize: 20.0),
+            body1: TextStyle(fontFamily: "Proxima", color: Colors.black, fontSize: 22.0),
             button:
                 TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
         primaryColor: grey,

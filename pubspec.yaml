@@ -86,6 +86,17 @@ flutter:
    - family: ProximaNova
      fonts:
        - asset: lib/assets/fonts/proxima-bold.ttf
+   - family: Lora
+     fonts:
+       - asset: lib/assets/fonts/Lora-Regular.ttf
+       - asset: lib/assets/fonts/Lora-Bold.ttf
+         weight: 900
+       - asset: lib/assets/fonts/Lora-BoldItalic.ttf
+         weight: 900
+         style: italic
+       - asset: lib/assets/fonts/Lora-Italic.ttf
+         style: italic
+        
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
