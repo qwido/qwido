@@ -71,12 +71,12 @@ class _CapturePageState extends State<CapturePage>
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        leading: IconButton(
+          icon: Icon(Icons.history),
+          onPressed: () =>
+              Navigator.push(context, RoutingAssistant.navToHistory()),
+        ),
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.history),
-            onPressed: () =>
-                Navigator.push(context, RoutingAssistant.navToHistory()),
-          ),
           IconButton(
             icon: Icon(Icons.map),
             onPressed: () =>
