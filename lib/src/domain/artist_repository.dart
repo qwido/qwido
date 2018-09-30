@@ -48,7 +48,7 @@ class ArtistRepository {
       "name": "Frédérick Lavoie",
       "photo": "fredlavoie.jpg",
       "bio": "Journaliste et écrivain, entre Montréal, Bombay et ailleurs",
-      "oeuvres": ["9782924519066", "9782923530468"],
+      "oeuvres": ["9782924519066", "9782894063842"],
       "social": [
         {"name": "twitter", "url": "https://twitter.com/fredotchka"},
         {"name": "goodreads", "url": "https://www.goodreads.com/author/show/6574091.Fr_d_rick_Lavoie?from_search=true"},
@@ -70,7 +70,7 @@ class ArtistRepository {
       var map = storage
           .singleWhere((Map<String, dynamic> artist) => artist['id'] == id);
 
-      List<Map<String, String>> socials = map['social'];
+      List<dynamic> socials = map['social'];
         
       final artist = Artist(
           id: map['id'],
