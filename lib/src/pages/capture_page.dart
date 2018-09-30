@@ -84,43 +84,31 @@ class _CapturePageState extends State<CapturePage>
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.only(
-          top: 50.0,
-          bottom: 0.0,
-          left: 24.0,
-          right: 24.0,
-        ),
-        child: Column(
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(28.0),
-              child: Center(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Column(
+            children: <Widget>[
+              Center(
                   child: Text(
                 'Appuyez pour scanner',
                 style: Theme.of(context).textTheme.display1,
               )),
-            ),
-            ScanCodeButton(animation),
-            Padding(
-              padding: EdgeInsets.only(
-                top: 100.0,
-                bottom: 20.0,
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 40.0),
+                child: ScanCodeButton(animation),
               ),
+            ],
+          ),
+          RaisedButton(
+            onPressed: _showBottomSheetCallback,
+            child: Text(
+              'SAISIR CODE QWIDO',
+              style: theme.textTheme.button,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 72.0),
-              child: RaisedButton(
-                onPressed: _showBottomSheetCallback,
-                child: Text(
-                  'SAISIR CODE QWIDO',
-                  style: theme.textTheme.button,
-                ),
-                color: theme.textTheme.title.color,
-              ),
-            ),
-          ],
-        ),
+            color: theme.textTheme.title.color,
+          ),
+        ],
       ),
     );
   }
