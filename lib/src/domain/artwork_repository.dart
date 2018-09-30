@@ -39,6 +39,7 @@ class ArtworkRepository {
     },
     {
       "id": "9782923530468",
+      "artist_id": "00269fee-13fa-4df5-a5ed-291e5e879d77",
       "name": "Allers simples : aventures journalistiques en Post-Soviétie",
       "image": "allers-simples.jpg",
       "date": "août 2012",
@@ -47,6 +48,7 @@ class ArtworkRepository {
     },
     {
       "id": "9782924519066",
+      "artist_id": "00269fee-13fa-4df5-a5ed-291e5e879d77",
       "name": "Ukraine à fragmentation",
       "image": "ukraine-a-fragmentation.jpg",
       "date": "16 novembre 2015",

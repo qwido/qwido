@@ -18,6 +18,14 @@ class ArtistPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Image artistPhoto;
+    if (artist.photo != null) {
+      artistPhoto =
+          Image.asset("lib/assets/photos/${artist.photo}", height: 300.0);
+    } else {
+      artistPhoto =
+          Image.asset("lib/assets/photos/silhouette.png", height: 300.0);
+    }
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -37,10 +45,8 @@ class ArtistPage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20.0),
-                child: Image.asset("lib/assets/photos/${artist.photo}",
-                    height: 300.00),
-              ),
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  child: artistPhoto),
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Text(
