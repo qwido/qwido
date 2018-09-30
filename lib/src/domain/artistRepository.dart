@@ -23,7 +23,7 @@ class ArtistRepository {
       "photo": "raoulhunter.png",
       "bio":
           "Raoul Hunter est un sculpteur et caricaturiste québécois né en 1926. Après des études d’art, de sculpture et de dessin, au Québec et à Paris, il devient caricaturiste au quotidien Le Soleil de Québec jusqu’en 1989. La sculpture étant sa passion, il produira près d'une cinquantaine d'oeuvres comme des monuments, des bustes, des bas-reliefs et des statues ainsi que plusieurs médailles commémoratives. Hunter a mérité plusieurs prix et distinctions jusqu'à l'Ordre du Canada en 1989.",
-      "oeuvres": ["112233"],
+      "oeuvres": ["11123"],
       "links": [
         {"name": "portfolio", "uri": "https://example.org/"},
         {"name": "patreon", "uri": "https://patreon.com/someprofile"}

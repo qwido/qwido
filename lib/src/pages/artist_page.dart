@@ -59,7 +59,7 @@ class ArtistPage extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 20.0),
-                child: ArtworkCarousel(),
+                child: ArtworkCarousel(artist),
               )
             ],
           )
