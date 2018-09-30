@@ -18,13 +18,15 @@ class ScanCodeButton extends StatelessWidget {
         color: Colors.transparent,
         elevation: 20.0,
         onPressed: () => scanQR().then((code) {
-          Artwork artwork = artworkRepository.findById(code);
-              if (artwork != null) {
-                Vibrate.feedback(FeedbackType.success);
-                Navigator.push(
-                    context, RoutingAssistant.navToArtworkPage(artwork));
-              } else {
-                ErrorToast.showError();
+              if (code != null) {
+                Artwork artwork = artworkRepository.findById(code);
+                if (artwork != null) {
+                  Vibrate.feedback(FeedbackType.success);
+                  Navigator.push(
+                      context, RoutingAssistant.navToArtworkPage(artwork));
+                } else {
+                  ErrorToast.showError();
+                }
               }
             }),
         child: PhysicalModel(
