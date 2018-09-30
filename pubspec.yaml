@@ -63,8 +63,9 @@ flutter:
   - lib/assets/photos/raoulhunter.png
   - lib/assets/photos/sergeboily.png
   - lib/assets/photos/silhouette.png
-  - lib/data/artists.json
-  - lib/data/oeuvres.json
+  - lib/assets/photos/allers-simples.png
+  - lib/assets/photos/ukraine-a-fragmentation.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

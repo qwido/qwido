@@ -36,7 +36,23 @@ class ArtworkRepository {
       "date": "24 août 1992",
       "description":
           "Zone Portuaire - Vieux Port - Chicoutimi\n\nAnnée de l’installation: 1992\n\nInaugurée le 24 août 1992 à l’occasion des 150 ans de la fondation de la ville de Chicoutimi, l’horloge, située au cœur de la zone portuaire est entourée de quatre plaques, dont la réalisation à fait appel à l’imaginaire des saguenéens quant à la projection de ce que sera leur ville dans 50 ans. Au cœur de l’horloge ont été placées des capsules temporelles qui seront ouvertes le 24 août 2042, 50 ans jour pour jour après leur dépôt."
-    }
+    },
+    {
+      "id": "9782923530468",
+      "name": "Allers simples : aventures journalistiques en Post-Soviétie",
+      "image": "allers-simples.jpg",
+      "date": "août 2012",
+      "description":
+          "À coups d’allers simples, le journaliste québécois Frédérick Lavoie parcourt le monde et le questionne. Le reporter – voyageur curieux et insatiable – nous emmène sur les routes de la « Post-Soviétie », ensemble géopolitique balloté entre Europe et Asie, uni par un passé commun et un avenir incertain. Entre les espoirs révolutionnaires de jeunes Biélorusses dans une prison de Minsk, le discours haineux de néo-nazis à Vladivostok, les malheurs d’une pauvre babouchka ouzbèke dans la dictature turkmène et les rêves de grandeur d’une chef de village tchétchène, il nous livre quelques moments de la vie des ex-Soviétiques qu’il a côtoyés lors de ses reportages aux quatre coins de l’empire déchu. Allers simples dévoile des réalités d’habitude inaccessibles."
+    },
+    {
+      "id": "9782924519066",
+      "name": "Ukraine à fragmentation",
+      "image": "ukraine-a-fragmentation.jpg",
+      "date": "16 novembre 2015",
+      "description":
+          "Comment un pays en paix s’enfonce-t-il soudainement dans la guerre ? Pourquoi des citoyens sans histoire en viennent-ils à prendre les armes et à s’entretuer ? Dans Ukraine à fragmentation, Frédérick Lavoie raconte à Artyom, un enfant qu’il a vu dans son petit cercueil bleu par un après-midi de janvier 2015, le fil des événements qui ont conduit à sa mort."
+    },
   ];
 
   Artwork findById(String id) {
