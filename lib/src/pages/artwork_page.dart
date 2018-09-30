@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:qwido/domain.dart';
-import 'package:qwido/utils.dart';
 import 'package:qwido/widgets.dart';
 import 'package:share/share.dart';
 

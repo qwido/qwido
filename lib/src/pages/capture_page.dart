@@ -107,7 +107,7 @@ class _CapturePageState extends State<CapturePage>
               child: RaisedButton(
                 onPressed: _showBottomSheetCallback,
                 child: Text(
-                  'SAIRISR CODE QWIDO',
+                  'SAISIR CODE QWIDO',
                   style: theme.textTheme.button,
                 ),
                 color: theme.textTheme.title.color,
