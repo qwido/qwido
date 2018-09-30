@@ -9,12 +9,10 @@ class ArtistRepository {
       "bio":
           "Serge BOILY est un artiste-sculpteur. Né à Montréal en 1945, c’est en 1966 qu’il s’installe dans la région du Saguenay-Lac-Saint-Jean. Auteur d’une dizaine d’œuvres publiques, c’est la sculpture-fontaine du Vieux-Port de Chicoutimi qui a lancé sa carrière.",
       "oeuvres": ["12345"],
-      "links": [
-        {"name": "portfolio", "uri": "https://example.org/"},
-        {"name": "patreon", "uri": "https://patreon.com/someprofile"}
-      ],
       "social": [
-        {"name": "twitter", "user": "@sergeboilyfake"}
+        {"name": "twitter", "url": "https://twitter.com/@sergeboilyfake"},
+        {"name": "portfolio", "url": "https://example.org/"},
+        {"name": "patreon", "url": "https://patreon.com/someprofile"}
       ]
     },
     {
@@ -24,13 +22,11 @@ class ArtistRepository {
       "bio":
           "Raoul Hunter est un sculpteur et caricaturiste québécois né en 1926. Après des études d’art, de sculpture et de dessin, au Québec et à Paris, il devient caricaturiste au quotidien Le Soleil de Québec jusqu’en 1989. La sculpture étant sa passion, il produira près d'une cinquantaine d'oeuvres comme des monuments, des bustes, des bas-reliefs et des statues ainsi que plusieurs médailles commémoratives. Hunter a mérité plusieurs prix et distinctions jusqu'à l'Ordre du Canada en 1989.",
       "oeuvres": ["11123"],
-      "links": [
-        {"name": "portfolio", "uri": "https://example.org/"},
-        {"name": "patreon", "uri": "https://patreon.com/someprofile"}
-      ],
       "social": [
-        {"name": "twitter", "user": "@hunter2"},
-        {"name": "facebook", "user": "facebook.com/rhunter2000"}
+        {"name": "twitter", "url": "https://twitter.com/@hunter2"},
+        {"name": "facebook", "url": "https://facebook.com/rhunter2000"},
+        {"name": "portfolio", "url": "https://example.org/"},
+        {"name": "patreon", "url": "https://patreon.com/someprofile"}
       ]
     },
     {
@@ -40,13 +36,11 @@ class ArtistRepository {
       "bio":
           "Armand Vaillancourt est un artiste peintre et sculpteur québécois né en 1929. Artiste engagé, Vaillancourt milite pour la justice, la paix et la liberté. Son Cénotaphe est un véritable manifeste artistique et pacifique. Ses œuvres, disséminés à travers le monde, amènent à la réflexion, encouragent la négociation et la résolution des problèmes.",
       "oeuvres": ["74383"],
-      "links": [
-        {"name": "portfolio", "uri": "https://example.org/"},
-        {"name": "patreon", "uri": "https://patreon.com/someprofile"}
-      ],
       "social": [
-        {"name": "twitter", "user": "@hunter2"},
-        {"name": "facebook", "user": "facebook.com/rhunter2000"}
+        {"name": "twitter", "url": "https://twitter.com/@hunter2"},
+        {"name": "facebook", "url": "https://facebook.com/rhunter2000"},
+        {"name": "portfolio", "url": "https://example.org/"},
+        {"name": "patreon", "url": "https://patreon.com/someprofile"}
       ]
     }
   ];
@@ -55,11 +49,15 @@ class ArtistRepository {
     try {
       var map = storage
           .singleWhere((Map<String, dynamic> artist) => artist['id'] == id);
+
+      List<Map<String, String>> socials = map['social'];
+        
       final artist = Artist(
           id: map['id'],
           name: map['name'],
           photo: map['photo'],
           bio: map['bio'],
+          social: socials.map((m) => Social(name: m['name'], url: m['url'])).toList(),
           oeuvres: map['oeuvres']);
       return artist;
     } catch (e) {

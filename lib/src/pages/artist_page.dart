@@ -12,6 +12,10 @@ class ArtistPage extends StatelessWidget {
     artist = artistRepository.findById(id.id);
   }
 
+  List<SocialIcon> iconList(List<Social> socials) {
+    return socials.map((s) => SocialIcon(s)).toList();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,13 +51,7 @@ class ArtistPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 80.0),
                 child: Row(
-                  children: <Widget>[
-                    Icon(FontAwesomeIcons.facebook),
-                    Icon(FontAwesomeIcons.twitter),
-                    Icon(FontAwesomeIcons.instagram),
-                    Icon(FontAwesomeIcons.patreon),
-                    Icon(FontAwesomeIcons.pinterest),
-                  ],
+                  children: iconList(artist.social),
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 ),
               ),

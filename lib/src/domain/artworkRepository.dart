@@ -48,7 +48,6 @@ class ArtworkRepository {
           name: map['name'],
           artistId: map['artist_id'],
           image: map['image'],
-          date: map['date'],
           description: map['description']);
       return artwork;
     } catch (e) {

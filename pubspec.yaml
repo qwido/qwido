@@ -21,6 +21,7 @@ dependencies:
       url: git://github.com/flutter/plugins
       path: packages/google_maps_flutter
   fluttertoast: ^2.0.8
+  url_launcher: ^4.0.0
 
   flutter:
     sdk: flutter
