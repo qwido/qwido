@@ -1,6 +1,6 @@
 # Qwido
 
-## Ce projet a commencé lors du Hackathon de la Journée de la culture.
+## Ce projet a été commencé lors du Hackathon de la Journée de la culture.
 
 Qwido est une application mobile permettant d'améliorer le rayonnement de la culture au Saguenay Lac-St-Jean. 
 
